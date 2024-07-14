@@ -65,7 +65,7 @@ document.getElementById('clearButton').addEventListener('click', () => {
 document.getElementById('closeButton').addEventListener('click', () => {
     const userConfirmed = confirm('Are you sure you want to log out?');
     if (userConfirmed) {
-        document.querySelector('iframe').src = 'https://advanced-master-coder.github.io/t/index.html';
+        document.querySelector('iframe').src = 'https://w3acadamey.github.io/t/index.html';
         userClicked = [];
         document.querySelector('.chat-viewer').style.display = 'none';
     }
