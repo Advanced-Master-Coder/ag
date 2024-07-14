@@ -1,0 +1,94 @@
+.chat-visible {
+    width: 100vw;
+    height: 100vh; /* Use full viewport height */
+    overflow: hidden; /* Hide the scrollbar */
+    white-space: nowrap; /* Prevent iframes from wrapping */
+    margin: 0 auto;
+    position: relative;
+}
+
+.iframe-container {
+    display: inline-block;
+    width: 100vw; /* Full width of the viewport */
+    height: calc(100vh - 40px); /* Adjust for window control bar */
+    border: none;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav-button.left {
+    left: 0;
+}
+
+.nav-button.right {
+    right: 0;
+}
+
+.window-controls {
+    height: 40px;
+    background-color: #d3d3d3; /* Chrome window control color */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.window-controls i {
+    margin-left: 10px;
+    cursor: pointer;
+    color: black; /* Set icon color to black */
+    padding: 8px; /* Add padding for better click area */
+    border-radius: 4px; /* Rounded corners */
+}
+.pass-btn {
+    background: none;
+    border: none;
+    cursor: pointer; /* Optional: to indicate it's clickable */
+    margin-left: 2%;
+}
+
+.window-controls i:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Highlight effect */
+}
+
+@media (max-width: 768px) {
+    .chat-visible {
+        height: 100vh; /* Use full viewport height for mobile view */
+    }
+
+    .nav-button {
+        padding: 8px; /* Adjust padding for mobile view */
+    }
+
+    .iframe-container {
+        height: calc(95vh - 40px); /* Adjust for window control bar */
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-visible {
+        height: 100vh; /* Use full viewport height for smaller mobile view */
+    }
+
+    .nav-button {
+        padding: 6px; /* Adjust padding for smaller mobile view */
+    }
+
+    .iframe-container {
+        height: calc(100vh - 40px); /* Adjust for window control bar */
+    }
+}
